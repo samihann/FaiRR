@@ -131,7 +131,7 @@ def main(args, splits='all'):
 			num_workers=args.num_workers,
 			pad_idx=args.padding,
 		)
-	dm.setup(splits=splits)
+	dm.setup(stage=None,splits=splits)
 
 	print(f'Loading {args.model} - {args.arch} model...')
 	if args.model == 'fairr_ruleselector':
